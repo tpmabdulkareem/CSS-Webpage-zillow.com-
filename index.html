@@ -2,19 +2,18 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 <style>
-    .body {
+    body {
         background: url(https://videos.zillowstatic.com/homepage/video_buy_santa_20161021_q.jpg);
-        width: 105%;
-        height: 800px;
+        background-size: cover;
         background-repeat: no-repeat;
+        background-size: 1450px 625px;
+        width: 100%;
+        /* height: 800px;*/
+        opacity: 1.5;
     }
     
     .op {
         opacity: .7;
-    }
-    
-    #table tr td {
-        background: rgpa(255, 255, 255, .5);
     }
     
     ody {
@@ -28,36 +27,47 @@
     /* ~~ Top Navigation Bar ~~ */
     
     #navigation-container {
-        width: 1200px;
+        width: 100%;
+        /*1200px*/
         margin: 0 auto;
         height: 70px;
     }
     
     .navigation-bar {
         background-color: #ffffff;
-        height: 70px;
+        color: rgb(39, 33, 33);
+        height: 40px;
         width: 100%;
+        margin: -10px;
     }
     
     #navigation-container img {
         float: left;
-        margin: -10;
-        margin-left: -45px;
-        margin-bottom: -20px;
+        margin: 0;
+        margin-left: 20px;
+        margin-bottom: -50px;
         width: 100;
         height: 100;
+        font-size: 25px;
+    }
+    
+    td tr {
+        border: #ffffff;
+        padding: 5px;
     }
     
     #navigation-container ul {
-        padding: 4px;
+        padding: 0px;
         margin: 0px;
         text-align: center;
         display: inline-block;
+        cursor: pointer;
     }
     
     #navigation-container li {
         list-style-type: none;
-        padding: 4px;
+        padding: 6px;
+        margin: -6px;
         /*height: -5px; 
         margin-top: 1px;
         margin-bottom: -5px;*/
@@ -65,39 +75,65 @@
     }
     
     .btn {
-        background: transparent;
-        opacity: 1.2;
-        border: none;
+        background: rgb(10, 10, 10);
+        opacity: 0.7;
+        border-color: white;
         color: white;
         font-size: 25px;
-        padding: 20px;
+        padding: 0px;
+        width: 150px;
+        height: 50px;
     }
     
-    #navigation-container li a {
+    h3 {
+        font-family: Nunito;
+        color: white;
+        margin-right: 10cm;
+        margin-left: 1cm;
+        margin-top: 4px;
+    }
+    
+    button:hover {
+        background-color: rgb(13, 121, 245);
+    }
+    
+    #r {
+        color: blue !important;
+    }
+    
+    #r:hover {
+        color: black !important;
+    }
+    
+    li:hover {
+        color: rgb(25, 9, 247);
+    }
+    
+    a:hover {
+        color: rgb(13, 121, 245);
+    }
+    
+    #navigation-container li {
         color: rgb(12, 12, 12);
-        font-size: 20px;
+        font-size: 15px;
         font-family: Nunito;
         text-decoration: none;
         line-height: 10px;
         padding: 10px;
-        opacity: 12;
+        opacity: 1;
+    }
+    
+    li a:hover {
+        color: blue;
     }
     
     .button {
         background-color: Transparent;
         background-repeat: no-repeat;
-        color: white;
-        border: none;
         cursor: pointer;
         overflow: hidden;
         outline: none;
         text-align: center;
-        margin: 3%;
-    }
-    
-    #button {
-        height: 510px;
-        width: 3052px;
     }
     
     .center-text {
@@ -105,70 +141,313 @@
         font-size: 25px;
         color: rgb(250, 250, 250);
         text-align: center;
-        margin: 10%;
+        margin: 5%;
+    }
+    
+    input {
+        padding: 5px;
+        text-align: center;
+        margin-top: 30%;
+        margin-left: 45%;
+        position: relative;
+        font-size: 15px;
+        border: block;
+        background: white;
+        border: 10px;
+        width: 40%
     }
     
     .blue-box {
-        background-color: rgb(78, 57, 156)
+        padding: 10px;
+        background-color: rgb(29, 20, 75);
+        opacity: .9;
+        display: inline-flex;
+        width: 100%;
+        height: 1.5cm;
+        margin-left: -8px;
+        margin-right: 1cm;
+        margin-top: 13%;
+    }
+    
+    .button1 {
+        color: rgb(255, 255, 255);
+        width: auto;
+        height: auto;
+        background: blue;
+        font-family: Nunito;
+    }
+    
+    .logo1 {
+        width: 2.2cm;
+        height: 1.2cm;
+        margin: 0px;
+        margin-right: 2cm;
+        margin-top: -7px;
+        position: left;
+        display: inline-block;
+    }
+    
+    .wbox {
+        height: auto;
+        position: relative;
+        width: 100%;
+        background-color: white;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+    }
+    /* Create four equal columns that floats next to each other */
+    
+    h4 {
+        text-align: left;
+    }
+    
+    .column {
+        float: left;
+        width: 25%;
+        padding: 10px;
+        height: 210px;
+        text-align: left;
+        font-family: Nunito;
+        /* Should be removed. Only for demonstration */
+    }
+    /* Clear floats after the columns */
+    
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        text-align: center;
+    }
+    
+    a {
+        font-family: Verdana;
+        display: inline;
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    
+    a:hover {
+        color: blue;
+    }
+    
+    .a1 {
+        color: rgb(74, 10, 248);
+    }
+    
+    .bbox {
+        height: 2.5cm;
+        position: bottom;
+        width: 100%;
+        margin-left: -8px;
+        background: black;
+        padding: 5px;
+    }
+    
+    .h3f {
+        font-family: Montserrat;
+        color: white;
+        text-align: center;
+        display: inline-block
     }
 </style>
 
-
-<div class="navigation-bar">
-    <div id="navigation-container">
-        <table>
-            <tr>
-                <td><img src="data:image/png;base64,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"></td>
-                <td>
-                    <ul>
-                        <li><a href="#buy">Buy</a></li>
-                        <li><a href="#rent">Rent</a></li>
-                        <li><a href="#sell">Sell</a></li>
-                        <li><a href="#mortages">Mortages</a></li>
-                        <li><a href="#agent-finder">Agent Finder</a></li>
-                        <li><a href="#home-design">Home Design</a></li>
-                        <li><a href="#more">More</a></li>
-                    </ul>
-                </td>
-            </tr>
-        </table>
-    </div>
+<body>
 
 
+    <div class="navigation-bar">
+        <div id="navigation-container">
+            <table>
+                <tr>
+                    <td><img src="data:image/png;base64,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"></td>
+                    <td>
+                        <ul>
+                            <li><a href="#buy">Buy</a></li>
+                            <li><a href="#rent">Rent</a></li>
+                            <li><a href="#sell">Sell</a> </li>
+                            <li><a href="#mortages">Mortgages </a></li>
+                            <li><a href="#agent finder">Agent Finder</a> </li>
+                            <li><a href="#list your rental">List your rental</a> </li>
+                            <li><a href="#homedesign">Home Design</a> </li>
+                            <li><a href="#more">More</a></li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li>
+                                <a></a>
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li id="r"> Advertise </li>
+                            <li id="r"> Sign in </li>
+                            <li id="r">or</li>
+                            <li id="r">Join </li>
 
-    <div class="center-text">
-        <h1>Find your way home®</h1>
-    </div>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
 
 
-    <tr>
-        <td>
-            <div class="button">
-                <button class="btn">Buy</button>
-                <button class="btn">Rent</button>
-                <button class="btn">Sell</button>
-                <button class="btn">Zestimate</button>
-                <div>
-                    <input>
-                    <button type="Search">Search</button>
+
+        <div class="center-text ">
+            <h1>Find your way home®</h1>
+        </div>
+
+
+        <tr>
+            <td>
+                <div class="button ">
+                    <button class="btn ">Buy</button>
+                    <button class="btn ">Rent</button>
+                    <button class="btn ">Sell</button>
+                    <button class="btn ">Zestimate</button>
+
                 </div>
+            </td>
+        </tr>
+
+    </div>
+    <form action="search ">
+        <tr>
+            <input type="search " placeholder="bl bla bla "><button class="button1 ">Search</button>
+        </tr>
+    </form>
+
+
+
+    <div class="blue-box ">
+        <img src="https://s.zillowstatic.com/cms/20171117015020153955:santa-village-icon.png " class="logo1 ">
+        <h3>Welcome to the North Pole See where Santa and the elves live.</h3><button type="Tour their Homes " class="button1 ">Tour their Homes</button>
+    </div>
+    <div class="wbox ">
+        <div class="row ">
+            <div class="column " style="background-color:rgb(235, 230, 230); ">
+
+                <ul style="list-style-type:none ">
+                    <h4>REAL ESTATE</h4>
+                    <li> Browse all homes</li>
+                    <li>real estate</li>
+                    <li>Atlanta real estate</li>
+                    <li>real estate</li>
+                    <li>Baltimore real estate</li>
+                    <li><a href=: "# ">More</a></li>
+                </ul>
+
 
             </div>
+            <div class="column " style="background-color:rgb(235, 230, 230); ">
+
+                <ul style="list-style-type:none ">
+                    <h4>RENTALS</h4>
+                    <li>Rental Buildings</li>
+                    <li>Atlanta apartments for rent</li>
+                    <li> Austin apartments for rent</li>
+                    <li>Baltimore apartments for rent</li>
+                    <li>Boston apartments for rent</li>
+                    <li><a href "#more ">More</a></li>
+
+                </ul>
+
+            </div>
+            <div class="column " style="background-color:rgb(235, 230, 230); ">
+
+                <ul style="list-style-type:none ">
+                    <h4>MORTAGE RATES</h4>
+                    <li>Current mortgage rates</li>
+                    <li>Alaska mortgage rates</li>
+                    <li>Alabama mortgage rates</li>
+                    <li>Arkansas mortgage rates</li>
+                    <li>Arizona mortgage rates</li>
+                    <li><a href="#more ">More</a></li>
+
+                </ul>
+
+            </div>
+            <div class="column " style="background-color:rgb(235, 230, 230); ">
+
+                <ul style="list-style-type:none ">
+                    <h4>BROWSE HOMES</h4>
+                    <li>California</li>
+                    <li>New York</li>
+                    <li>Florida</li>
+                    <li>Illinois</li>
+                    <li><a href="#more ">More</a></li>
 
 
-        </td>
-    </tr>
+                </ul>
 
+            </div>
+        </div>
+    </div>
+    </div>
 
+    <div class="bbox ">
+        <h3 class="h3f ">Zillow Group®Brands:Trulia l Street l Easy HotPads l Naked Apartments l RealEstate.com </h3>
+    </div>
 
-</div>
-
-
-<div class="blue-box">
-
-</div>
-
-<body class="body"></body>
 
 
 </body>
