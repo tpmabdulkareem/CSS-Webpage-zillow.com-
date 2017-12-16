@@ -144,19 +144,6 @@
         margin: 5%;
     }
     
-    input {
-        padding: 5px;
-        text-align: center;
-        margin-top: 30%;
-        margin-left: 45%;
-        position: relative;
-        font-size: 15px;
-        border: block;
-        background: white;
-        border: 10px;
-        width: 40%
-    }
-    
     .blue-box {
         padding: 10px;
         background-color: rgb(29, 20, 75);
@@ -173,6 +160,7 @@
         color: rgb(255, 255, 255);
         width: auto;
         height: auto;
+        border: none;
         background: blue;
         font-family: Nunito;
     }
@@ -205,6 +193,61 @@
     
     h4 {
         text-align: left;
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        visibility: visible;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        margin-left: 420px;
+        margin-top: 7cm;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent white transparent;
+    }
+    
+    .form-wrapper {
+        list-style-type: none;
+        width: 595px;
+        height: 55px;
+        margin-top: 7.5cm;
+        margin-left: 320px;
+        overflow: hidden;
+        background-color: white;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-right: 0;
+        border: none;
+        padding-bottom: 5px;
+    }
+    
+    .search {
+        border: none;
+        border-radius: 5px;
+        height: 40px;
+        width: 110px;
+        font-family: Verdana;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        background-color: #286fe2;
+        color: white;
+        cursor: pointer;
+    }
+    
+    .input {
+        height: 60px;
+        width: 440px;
+        padding-right: 32px;
+        border: none;
+        font-size: 18px;
+        border: none;
     }
     
     .column {
@@ -370,11 +413,15 @@
         </tr>
 
     </div>
-    <form action="search ">
-        <tr>
-            <input type="search " placeholder="bl bla bla "><button class="button1 ">Search</button>
-        </tr>
-    </form>
+    <div class="tooltip ">
+        <span class="tooltiptext"></span>
+    </div>
+    <div>
+        <form class="form-wrapper ">
+            <input class="input" type="text" placeholder="&nbsp Enter an address, neighborhood, city or ZIP code" required>
+            <button class="search" type="submit">Search</button>
+        </form>
+    </div>
 
 
 
