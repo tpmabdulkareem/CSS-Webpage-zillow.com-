@@ -2,5 +2,7 @@
 
 ## Mimicked Website Screen-Shot
 
-![zillow1]()
-![zillow1]()
+
+<img src="Zillow1.JPG">
+
+<img src="zillow2.JPG">
